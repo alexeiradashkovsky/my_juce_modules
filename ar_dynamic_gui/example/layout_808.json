@@ -1,0 +1,58 @@
+{
+  "plugin_name": "AR-808 Overdrive",
+  "version": "1.0.0",
+  "skin": "vintage_green",
+  "window_size": {
+    "width": 800,
+    "height": 900
+  },
+  "controls": [
+    {
+      "id": "drive",
+      "name": "Drive",
+      "x": 50,
+      "y": 80,
+      "width": 100,
+      "height": 100,
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "id": "tone",
+      "name": "Tone",
+      "x": 170,
+      "y": 80,
+      "width": 100,
+      "height": 100,
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.5
+    },
+    {
+      "id": "level",
+      "name": "Level",
+      "x": 290,
+      "y": 80,
+      "width": 100,
+      "height": 100,
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.7
+    }
+  ],
+  "buttons": [
+    {
+      "id": "bypass",
+      "name": "Power",
+      "type": "toggle",
+      "x": 190,
+      "y": 200,
+      "width": 60,
+      "height": 80,
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0
+    }
+  ]
+}
