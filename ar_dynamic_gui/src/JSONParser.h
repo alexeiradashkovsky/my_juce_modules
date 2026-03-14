@@ -42,7 +42,7 @@ public:
                     _all_settings.push_back(parseFunc(item));
                 }
             }
-            };
+        };
 
         parseArray("controls", [](const juce::var& c) -> AnyControlSettings {
             ControlSettings s;
@@ -56,7 +56,7 @@ public:
             s.width         = c.getProperty("width", 80); 
             s.height        = c.getProperty("height", 80);
             return s;
-            });
+        });
 
         parseArray("buttons", [](const juce::var& b) -> AnyControlSettings {
             ButtonSettings s;
@@ -69,7 +69,7 @@ public:
             s.height        = b.getProperty("height", 80);
             s.default_state = b.getProperty("default", 0);
             return s;
-            });
+        });
 
         return true;
     }
