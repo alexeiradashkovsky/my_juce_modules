@@ -69,6 +69,20 @@ public:
             g.fillEllipse(centerX - (ledSize * 0.5f), ledY, ledSize, ledSize);
         }
     }
+
+    void drawFilmstripKnob(juce::Graphics& g, juce::Image& strip, int numFrames, float sliderPosProportion)
+    {
+        int frameWidth = strip.getWidth();
+        if (numFrames <= 0) return; // Avoid division by zero
+        int frameHeight = strip.getHeight() / numFrames;
+
+        // Calculate which frame to show (0 to numFrames - 1)
+        int frameIndex = (int)std::ceil(sliderPosProportion * (numFrames - 1));
+
+        // Draw the specific slice of the image
+        g.drawImage(strip, 0, 0, frameWidth, frameHeight, // Destination
+            0, frameIndex * frameHeight, frameWidth, frameHeight); // Source
+    }
 private:
     juce::Image _imageStrip;
     int _numFrames;
